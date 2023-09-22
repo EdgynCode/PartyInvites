@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+        <title>Party</title>
+    </head>
+    <body>
+        <div>
+            <h1>Thank you @Model?.Name.</h1>
+            <div>
+            @if (Model?.WillAttend == true)
+            {
+                <p>Thank you for attending!</p>
+            }
+            else
+            {
+                <p>Sorry!</p>
+            }
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+@{
+    Layout = null;
+}
+@model GuestResponse
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Party</title>
+    </head>
+    <body>
+        <form method="post" asp-action="RsvpForm">
+            <div>
+                <label asp-for="Name">Your Name</label>
+                <input asp-for="Name"/>
+            </div>
+            <div>
+                <label asp-for="Email">Your Email</label>
+                <input asp-for="Email" />
+            </div>
+            <div>
+                <label asp-for="Phone">Your Phone</label>
+                <input asp-for="Phone" />
+            </div>
+            <div>
+                <label asp-for="WillAttend">Will you attend:</label>
+                <select>
+                    <option value="">Choose an option:</option>
+                    <option value="true">Yes, I'll be there</option>
+                    <option value="false">No, I won't be there</option>
+                </select>
+            </div>
+            <button type="submit">Click to submit</button>
+        </form>
+    </body>
+</html>
