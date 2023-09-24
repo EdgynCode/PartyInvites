@@ -9,5 +9,10 @@
             Console.WriteLine(response.ToString());
             _response.Add(response);
         }
+        public static IEnumerable<GuestResponse> GetResponses()
+        {
+            return _response;
+        }
+
     }
 }

@@ -1,6 +1,9 @@
 ﻿@{
     Layout = null;
+    var responses = PartyInvites.Models.Repository.GetResponses();
 }
+
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width"/>
@@ -9,6 +12,24 @@
     <body>
         <div>
             <h1>Here is the list of people attending the party</h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+                @foreach (var rsp in responses)
+                {
+                    if (rsp.WillAttend == true)
+                    {
+                        <tr>
+                            <td>@rsp.Name</td>
+                            <td>@rsp.Email</td>
+                            <td>@rsp.Phone</td>
+                        </tr>
+                    }
+                }
+            </table>
         </div>
     </body>
 </html>
