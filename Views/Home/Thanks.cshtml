@@ -1,6 +1,9 @@
 ﻿@{
     Layout = null;
 }
+
+
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width"/>
@@ -12,13 +15,14 @@
             <div>
             @if (Model?.WillAttend == true)
             {
-                <p>Thank you for attending!</p>
+                @:Thank you for attending!
             }
             else
             {
-                <p>Sorry!</p>
+                @:Sorry!
             }
-        </div>
+            </div>
+            <a asp-action="Index">Back to Index</a>
         </div>
     </body>
 </html>

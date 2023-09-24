@@ -11,5 +11,10 @@ namespace PartyInvites.Models
         public string? Email { get; set; }
         public string? Phone { get; set; }
         public bool? WillAttend { get; set; }
+        public override string ToString()
+        {
+            // Return a custom string representation of the GuestResponse object
+            return $"Name: {Name}, Email: {Email}, Phone: {Phone}, WillAttend: {WillAttend}";
+        }
     }
 }
